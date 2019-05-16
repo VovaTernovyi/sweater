@@ -18,6 +18,7 @@ public class User implements UserDetails {
     private boolean active;
 
     private String email;
+    @Column(name = "activation_code")
     private String activationCode;
 
     @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
